@@ -1,0 +1,694 @@
+{
+  "retrieved_date": "2026-10-28",
+  "project_version": "0.1.0",
+  "scope": "Targeted implementation/document study, not an exhaustive audit or execution of upstream programs.",
+  "distribution": "Original implementation only; no upstream source, datasets, weights, or document contents are redistributed.",
+  "sources": [
+    {
+      "id": "languagetool",
+      "kind": "repository",
+      "url": "https://github.com/languagetool-org/languagetool",
+      "status": "downloaded",
+      "commit": "e241b381d8b622c7e8bdd8ead7e14022ea0ee3de",
+      "sha256": "87beb8041d4d02b0b29694783a359a7ca57840c639f3c29f276dec51d555de67",
+      "bytes": 100213765,
+      "license_summary": "LGPL-2.1-or-later core; cloud rules separate",
+      "reading_scope": "Spanish repetition implementation and exception mechanism; developer documentation for local/cloud boundary.",
+      "retained": "Keep language-specific exceptions and human review of deliberate repetition.",
+      "rejected_or_deferred": "Do not bundle grammar engine, dictionaries, or premium rules; grammar is optional integration.",
+      "inspected_files": [
+        {
+          "path": "languagetool-language-modules/es/src/main/java/org/languagetool/rules/es/SpanishWordRepeatRule.java",
+          "sha256": "44fb1658eb301109bc696e560dacc90af8ad4c8ee3a3a2999f23fa2175b4518a"
+        }
+      ],
+      "license_files": [
+        "COPYING.txt"
+      ]
+    },
+    {
+      "id": "vale",
+      "kind": "repository",
+      "url": "https://github.com/vale-cli/vale",
+      "status": "downloaded",
+      "commit": "8b9bfb97700a707140fff9f444048439df5bc9b1",
+      "sha256": "5b7c36af389e54ce8ee8562a22ff2eba5c9be19195e4c031f1a28eaafd5792fd",
+      "bytes": 10916531,
+      "license_summary": "MIT",
+      "reading_scope": "Occurrence and repetition rule implementations, scopes, exceptions and alert anchoring.",
+      "retained": "Keep explicit author-defined thresholds, located evidence and intentional exceptions.",
+      "rejected_or_deferred": "Reject applying English technical-writing style packages as a universal comedy guide.",
+      "inspected_files": [
+        {
+          "path": "internal/check/occurrence.go",
+          "sha256": "487c97ff442ac6c35d3da51ece2945a905d4ff726486faa59c7b67996caab299"
+        },
+        {
+          "path": "internal/check/repetition.go",
+          "sha256": "ac20bc07c9a2216f493aec938bbf9da00cce57968be03d1f40b5f6ece2392c06"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "textstat",
+      "kind": "repository",
+      "url": "https://github.com/textstat/textstat",
+      "status": "downloaded",
+      "commit": "5679e7ccc0c2627bca1c0506eae1a7feb802a163",
+      "sha256": "4794824698427ebf4386fda969cbdf5132fb2bbbc2095dbfb87d5d56ae6d187e",
+      "bytes": 207488,
+      "license_summary": "MIT",
+      "reading_scope": "Reading-time and Spanish readability formula implementations.",
+      "retained": "Keep reproducible mechanical counts and disclose what a metric actually measures.",
+      "rejected_or_deferred": "Reject treating reading formulas or character-based reading time as comic delivery measurements.",
+      "inspected_files": [
+        {
+          "path": "textstat/backend/metrics/_reading_time.py",
+          "sha256": "4c07375c16443e6fc5a98c2e80c8ca985e1beb82653351604258700a2df9765d"
+        },
+        {
+          "path": "textstat/backend/metrics/_fernandez_huerta.py",
+          "sha256": "592975c81eb61f3b6c60fc25d5d6c8d78fb4752ba6b43539fe3a3515a8f48646"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "sentence-transformers",
+      "kind": "repository",
+      "url": "https://github.com/huggingface/sentence-transformers",
+      "status": "downloaded",
+      "commit": "298ce58ae8cb986ccbaa4cbfc5432f96003522e2",
+      "sha256": "2998da13d32f02f87136dd6602205335e8b8bd5bd526ab0a532946dfd233c58e",
+      "bytes": 18957964,
+      "license_summary": "Apache-2.0 code; individual model licenses separate",
+      "reading_scope": "Paraphrase-mining API, embedding computation and retrieval semantics; model card separately.",
+      "retained": "Keep optional retrieval over authorized prior work and inspection of related ideas.",
+      "rejected_or_deferred": "Defer embeddings/model dependency; bundled lexical bigram retrieval is explicitly less capable.",
+      "inspected_files": [
+        {
+          "path": "sentence_transformers/util/retrieval.py",
+          "sha256": "8ae2028423c11375d3f26a95f7d6fce0ae22156ec7734d706f1ac11c8dd426d0"
+        }
+      ],
+      "license_files": [
+        "LICENSE",
+        "NOTICE.txt"
+      ]
+    },
+    {
+      "id": "audacity",
+      "kind": "repository",
+      "url": "https://github.com/audacity/audacity",
+      "status": "downloaded",
+      "commit": "6adf0c1fae8713a34f9a06df8ac4ed5ba11b3ce1",
+      "sha256": "276668901249648176db1d7c74a127ea78d9ebc5c66e22c0308e395b9cd79e57",
+      "bytes": 67753387,
+      "license_summary": "GPL-3.0 distribution; per-file terms and documentation terms differ",
+      "reading_scope": "Label identity, time intervals, import/export interfaces and distribution license header.",
+      "retained": "Keep stable identifiers and measured interval annotations distinct from predictions.",
+      "rejected_or_deferred": "Do not reproduce an audio editor or infer that the toolkit listened to a recording.",
+      "inspected_files": [
+        {
+          "path": "au3/libraries/au3-label-track/LabelTrack.h",
+          "sha256": "54f65bbadfccf9323592105eef5eda252434d851c3c6131a3d827b14f17f0461"
+        }
+      ],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "id": "whisperx",
+      "kind": "repository",
+      "url": "https://github.com/m-bain/whisperX",
+      "status": "downloaded",
+      "commit": "5d3678b8535698a2826a5db9eb3e4105aef85dd9",
+      "sha256": "f103a9e17a1ac6257de438399b36e957d7c9dcaa25469c56e50d445d4eb53086",
+      "bytes": 16804860,
+      "license_summary": "BSD-2-Clause code; models and other components separate",
+      "reading_scope": "Alignment model selection, language/dictionary coverage, text preprocessing and automatic resource-download paths.",
+      "retained": "Keep explicit alignment uncertainty and the distinction between recognized text and interpretation.",
+      "rejected_or_deferred": "Defer ASR/alignment execution; no model/resource downloads in the helper.",
+      "inspected_files": [
+        {
+          "path": "whisperx/alignment.py",
+          "sha256": "df1e565ebe9e039c9c32f2fafff427ee1b7107bdb45699f0fe636163a62957f2"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "laughter-detection",
+      "kind": "repository",
+      "url": "https://github.com/jrgillick/laughter-detection",
+      "status": "downloaded",
+      "commit": "5d5e0327916959d832d95ffbef5f484efc93d799",
+      "sha256": "7d0809e7c802335ad80d74050ee675ca86be5bbcaaf939ea6ae4e2131b66b0fe",
+      "bytes": 29411163,
+      "license_summary": "MIT repository; inspect checkpoint/data terms separately before other reuse",
+      "reading_scope": "Prediction threshold, minimum duration, temporal segmentation and audio/TextGrid output paths.",
+      "retained": "Keep reaction intervals as observations requiring source/context and manual verification.",
+      "rejected_or_deferred": "Reject causal quality scores from a detector, and reject edited laughter as audience evidence.",
+      "inspected_files": [
+        {
+          "path": "segment_laughter.py",
+          "sha256": "ea5708845781dcbaec6c870cb5707f5b1e5bee33938b3da6bf1344084071ff34"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "trelby",
+      "kind": "repository",
+      "url": "https://github.com/trelby/trelby",
+      "status": "downloaded",
+      "commit": "ded2305b7e2938fbcfc9a245c6f00947d8edc509",
+      "sha256": "707cd5f4e93b00066930169ba0072c76ea4a649da13b14d0e6ca3c2280408800",
+      "bytes": 1892472,
+      "license_summary": "GPL-2.0",
+      "reading_scope": "compareScripts implementation and its text-to-PDF diff presentation, not the entire editor.",
+      "retained": "Keep reviewable before/after text differences.",
+      "rejected_or_deferred": "Do not reproduce pagination/PDF editor; use an original wrapper around Python standard-library diff.",
+      "inspected_files": [
+        {
+          "path": "trelby/screenplay.py",
+          "sha256": "b36855a6acba12c6e92a657987056af8b4469b2e786d28a32a8822034d50e314"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "ragthoven",
+      "kind": "repository",
+      "url": "https://github.com/ragthoven-dev/ragthoven",
+      "status": "downloaded",
+      "commit": "4411b33f9e777e85efe4b77b13dc814541b63de5",
+      "sha256": "2ee3bdef1bb45d9c71e338683905442b4ae66368ee49841136b8a408c1027c4f",
+      "bytes": 397492,
+      "license_summary": "MIT",
+      "reading_scope": "Configuration loading and separation of retrieval, generation, results and iteration settings.",
+      "retained": "Keep explicit input/result contracts and traceability of configuration.",
+      "rejected_or_deferred": "Defer a general RAG orchestration stack for a small editorial task.",
+      "inspected_files": [
+        {
+          "path": "ragthoven/utils/config_loader.py",
+          "sha256": "26e6e8043aa16dff97eda03358ae2ab89663bfd0db83bdd1e319ae80d7832a82"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "ragthoven-humor",
+      "kind": "repository",
+      "url": "https://github.com/ragthoven-dev/semeval-2026-task-1",
+      "status": "downloaded",
+      "commit": "5d70bb2a766b4e6d7f276251529a373978f7f26e",
+      "sha256": "3f85bc1c16a6a603e50be9410745983db63ca59890c22a9a15542c32d32b2fe7",
+      "bytes": 1436698,
+      "license_summary": "No explicit root license found in the inspected snapshot",
+      "reading_scope": "Spanish experiment prompt configuration, candidate/critique stages and deterministic constraint audit; paper results/limitations.",
+      "retained": "Keep distinct alternatives, evidence-grounded selection and constraint checks independent of artistic judgment.",
+      "rejected_or_deferred": "Do not copy experiment prompts/corpus; reject fixed candidate quotas, benchmark punctuation rules and unsupported multi-agent superiority.",
+      "inspected_files": [
+        {
+          "path": "experiments/mwahaha_exp08_subtaskA/config/es_test.yaml",
+          "sha256": "150448a2107ac6fe25140f6bfbc8c66bca7101e0a0a773f099cf9ac1db70b53f"
+        },
+        {
+          "path": "experiments/mwahaha_exp09_subtaskA/analysis/evaluate_outputs.py",
+          "sha256": "a206bbea368c909cf9cb8f140aa9d37f90e8d54f1ccad2899df212caef7d074d"
+        }
+      ],
+      "license_files": []
+    },
+    {
+      "id": "dramatron",
+      "kind": "repository",
+      "url": "https://github.com/google-deepmind/dramatron",
+      "status": "downloaded",
+      "commit": "2e7c36afadacf8321b77a468940024371b7a8c7a",
+      "sha256": "654019fac17469dc603fb4428fdad24008c4920b0e1b2c82de7abe17e4e5e5f5",
+      "bytes": 569132,
+      "license_summary": "Apache-2.0 software; other materials have separate terms",
+      "reading_scope": "Notebook entity representation, generation interface, bounded generation loop and GenerationHistory; not executed.",
+      "retained": "Keep coherent context across larger drafts and inspectable revision history.",
+      "rejected_or_deferred": "Do not reproduce notebook UI, supplied examples, or model adapters; a stored brief and explicit diff suffice here.",
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "sha256": "a5ea4a2404dbad06ac00ecafc8a7201419a455beabcf02c5b82dd684f4992164"
+        },
+        {
+          "path": "colab/dramatron.ipynb",
+          "sha256": "d490fbf0cd9db3cb13c9298ee60e527e76a17afd4f7421c0cadaac247e45d21b"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "screenwriting-skills",
+      "kind": "repository",
+      "url": "https://github.com/jtydhr88/screenwriting-skills",
+      "status": "downloaded",
+      "commit": "51115f18d160aa8b2ac5813e4432b6f0b425358f",
+      "sha256": "f8fe943cf26307a48f3ccbed7403e488b8abb1d81315127fe7c17e6ada4e431b",
+      "bytes": 1527884,
+      "license_summary": "MIT original instructions; quoted books/scripts/translations excluded by NOTICE",
+      "reading_scope": "Comedy mechanics, format boundaries, dialogue diagnosis and source/reuse notice.",
+      "retained": "Keep choosing the right level of revision, persona-specific speech and context-dependent payoff placement.",
+      "rejected_or_deferred": "Reject sitcom page/act/laugh quotas for other formats; do not redistribute quotations, corpus tables or translated passages.",
+      "inspected_files": [
+        {
+          "path": "plugins/screenwriting/skills/sw-sitcom-comedy/SKILL.md",
+          "sha256": "d3e4c1f6cdb604e2f0b92d8797530306fea0b5033db8f891f565cb5cc6e6db6b"
+        },
+        {
+          "path": "plugins/screenwriting/skills/sw-dialogue/SKILL.md",
+          "sha256": "f7fd1ab1cdc78be10c7604e464d048072af873ec84f8b28654692be74448a3a1"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "e6a992ef62ff5eb4b4a5f55223b30f496388a75071d45265395476ec72324bc3"
+        }
+      ],
+      "license_files": [
+        "LICENSE",
+        "NOTICE"
+      ]
+    },
+    {
+      "id": "hermes-comedy",
+      "kind": "repository",
+      "url": "https://github.com/SpencerRaw/hermes-comedy-writing",
+      "status": "downloaded",
+      "commit": "f9037df01db098ee9956ae4df36fbc68790f49c4",
+      "sha256": "25216d9d61d6292e809f4b2aab15c998cd7369de04a178724b9d54d2ac89b002",
+      "bytes": 14094,
+      "license_summary": "MIT",
+      "reading_scope": "Complete workflow and review checklist, including language and length constraints.",
+      "retained": "Keep specific speaker stance, concrete situations and not fabricating personal details.",
+      "rejected_or_deferred": "Reject mandatory Chinese output, fixed character counts, obligatory question chains and a ban on drafting when drafting is requested.",
+      "inspected_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "a70226f24dd5892cbd225db36f0da866253407091f9a281109f9f27a4019187a"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "standup-skills",
+      "kind": "repository",
+      "url": "https://github.com/vkorost/claude-standup-skills",
+      "status": "downloaded",
+      "commit": "c78a0e3272026348a10f1676d3a23201eaea5c71",
+      "sha256": "3889ce9ae8277f4a7d4b6cd0dfc910d95857376a8d240b2f08edce32d471ebd0",
+      "bytes": 111390,
+      "license_summary": "MIT instructions; no performer material bundled here",
+      "reading_scope": "Selected voice, structural and anti-pattern sections; cross-style comparison, not every file line.",
+      "retained": "Keep an explicit author-owned voice brief and distinguish a transformed return from mere repetition.",
+      "rejected_or_deferred": "Reject celebrity imitation presets as the default for an original character.",
+      "inspected_files": [
+        {
+          "path": "style-george-carlin/SKILL.md",
+          "sha256": "425bf2a9f12b5e890615f6dc0a60d6ad63121d0ce620d1ef1144fbda4eb6a852"
+        },
+        {
+          "path": "style-colin-quinn/SKILL.md",
+          "sha256": "5456f075200d796aff9a2eba29a1e738e55b8e2c534f55c80bc3eec07c589f52"
+        },
+        {
+          "path": "style-louis-ck/SKILL.md",
+          "sha256": "f2a597488fd92ebdc6e9bdc2b08af6fe5058650f2550fced7b69e4bd3221dc11"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "moltline",
+      "kind": "repository",
+      "url": "https://github.com/GarphenGate/moltline-oss",
+      "status": "downloaded",
+      "commit": "e0b40c34ed2e937c663542bd1d3f144063902ef8",
+      "sha256": "5265ddda0424b5a055b6d85e4b2346df74807d6a521ca9d42ffd994be917d7ff",
+      "bytes": 253052,
+      "license_summary": "Custom Moltline Free Skills License v1; redistribution/competing derivatives restricted",
+      "reading_scope": "Complete public gateway skill and its custom license.",
+      "retained": "Keep a factual source-status distinction: public access is not an open redistribution license.",
+      "rejected_or_deferred": "Exclude the skill text, question sequence, output template and paid bundle; write our own method independently.",
+      "inspected_files": [
+        {
+          "path": "skills/comedy-writing-room/SKILL.md",
+          "sha256": "4bc57432c65d2e64cbdc60a2cf926b6459a562f12806e4efb2e33b8a41dba98f"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "c6395c9f73c9b39944fd059b85c64b1b5b19ab0ccae343d8c0464b75863d4550"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "scrite",
+      "kind": "repository",
+      "url": "https://github.com/teriflix/scrite",
+      "status": "downloaded",
+      "commit": "e6e31327af3f2f3c74087af40c1fbd96302ead71",
+      "sha256": "f20012bb4d6171232bb5c1a43c92a9bbcfc906e9ff450528e37e9540b0fdbc4b",
+      "bytes": 94760982,
+      "license_summary": "GPL-3.0 source; official commercial binaries and third-party components have separate terms",
+      "reading_scope": "Statistics-report interface and distribution-license sections; official FAQ separately.",
+      "retained": "Keep separation between organizational reports and writing quality.",
+      "rejected_or_deferred": "Do not reproduce the graphical screenplay editor or interpret counts as comic success.",
+      "inspected_files": [
+        {
+          "path": "apps/desktop/src/reports/statisticsreport.h",
+          "sha256": "ee5f62304107635a55fc80196819b03c7af8be25a9a4732991c6964c0acd72bf"
+        },
+        {
+          "path": "LICENSE.txt",
+          "sha256": "b03775aba457581646e24ed0206eb2701eeac531d97f7c020682313ca53199ac"
+        }
+      ],
+      "license_files": [
+        "LICENSE.txt"
+      ]
+    },
+    {
+      "id": "story-architect",
+      "kind": "repository",
+      "url": "https://github.com/story-apps/starc",
+      "status": "downloaded",
+      "commit": "c5bf39ff2c70ae56656e8e97202f0cbb148ac0d3",
+      "sha256": "d9d31cba52597788e7b7d6292edaf3a1be6384a9c01a69215870c7a8b4292d83",
+      "bytes": 23642446,
+      "license_summary": "GPL-3.0 open core; closed/free and premium modules separate",
+      "reading_scope": "Screenplay/treatment presentation and beat-visibility interface; official open-core description separately.",
+      "retained": "Keep structured beats separate from their performance rendering.",
+      "rejected_or_deferred": "Do not copy application modules or claim premium AI features are included in open-source core.",
+      "inspected_files": [
+        {
+          "path": "src/corelib/business_layer/document/screenplay/text/screenplay_text_document.h",
+          "sha256": "e2b3013e001b892fa2b86514a95aff31061da979101fe2e277f5cd7aed4cad62"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "beat",
+      "kind": "repository",
+      "url": "https://github.com/lmparppei/Beat",
+      "status": "downloaded",
+      "commit": "5c32c72c0d1e92a0b326d5fa5e7515ef4d7e1f3f",
+      "sha256": "41ebce95ee24c34d5ffcdba3c54b63fde06f4c586c71587dfac60eb92ecaf75e",
+      "bytes": 18985085,
+      "license_summary": "GPL-3.0 distribution; file-specific/third-party notices remain",
+      "reading_scope": "Revision-state interface, portability/format features and license boundary.",
+      "retained": "Keep inspectable revisions and explicit suggestions rather than silently overwriting a draft.",
+      "rejected_or_deferred": "Do not reproduce Apple UI/Fountain parser or treat its page conventions as monologue timing.",
+      "inspected_files": [
+        {
+          "path": "README.md",
+          "sha256": "f8a2ad08ee9df7eff070ec8132e5251b3e0379912b0a2a2068c871179d080e7d"
+        },
+        {
+          "path": "Frameworks/BeatCore/BeatCore/Screenplay data/Revisions/BeatRevisionItem.h",
+          "sha256": "8001f932501ba2e715506779d2ab70f9a29f24fa929ccc5d48bc07d2531eb60a"
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "991140c6869e9639b3e2664e74ee9f95bce78725fe893533abd82bebcf78338b"
+        }
+      ],
+      "license_files": [
+        "LICENSE.md"
+      ]
+    },
+    {
+      "id": "story-skills",
+      "kind": "repository",
+      "url": "https://github.com/danjdewhurst/story-skills",
+      "status": "downloaded",
+      "commit": "e44c97ce8eee4db3bbc82db05c4f7982e470e2bd",
+      "sha256": "3ef1f68b370adf226dfe08800b94ae47ba8d9cebebeba9de7429174401461049",
+      "bytes": 4101608,
+      "license_summary": "MIT",
+      "reading_scope": "Line-editing workflow, dialect treatment, author baseline, read-aloud caveats and edit-note evidence.",
+      "retained": "Keep author voice as the comparison standard and quote affected material before justifying an edit.",
+      "rejected_or_deferred": "Reject novel-project setup and permission steps that are unnecessary for an already authorized short revision.",
+      "inspected_files": [
+        {
+          "path": "skills/line-editing/SKILL.md",
+          "sha256": "8461f352535778542ae3579b87118ca49f9dbc8a72ee1cd688f621d92ff9690f"
+        }
+      ],
+      "license_files": [
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "openmic-alternative",
+      "kind": "repository",
+      "url": "https://github.com/huolanmiao/OpenMic",
+      "status": "downloaded",
+      "commit": "1bbf28f6618d810d505d2f1ae9128eb11ee3bf08",
+      "sha256": "f7304f0a7e2434ba43dbf25ec5d1ceb4de9fcdcd02b8b9b77f068cc3b442aa89",
+      "bytes": 5124426,
+      "license_summary": "No explicit root license found; provenance not verified against the paper",
+      "reading_scope": "Alternative repository controller prompt, weighted scores and round-dependent acceptance conditions.",
+      "retained": "Keep writing, delivery and audience considerations as distinct editorial perspectives.",
+      "rejected_or_deferred": "Reject a mandatory pass on a later round, invented precision, and claims that an LLM judge is a real audience.",
+      "inspected_files": [
+        {
+          "path": "src/agents/quality_controller.py",
+          "sha256": "2121c81a5c643312e9ddeae57b951acc1b06b2243d2ee93c7cb81089f86135a9"
+        },
+        {
+          "path": "README.md",
+          "sha256": "b3af7ebc48bbe886821f9d99bb391d91b233fce961d971df86854fb581474b72"
+        }
+      ],
+      "license_files": []
+    },
+    {
+      "id": "openmic-paper-repo",
+      "kind": "repository",
+      "url": "https://github.com/acetocarmine11/OpenMic",
+      "status": "unavailable",
+      "reading_scope": "Unavailable paper-linked repository; no source inspection possible.",
+      "rejected_or_deferred": "Do not treat the differently owned alternative as a verified artifact of this paper."
+    },
+    {
+      "id": "languagetool-local.html",
+      "kind": "document",
+      "url": "https://dev.languagetool.org/http-server",
+      "status": "downloaded",
+      "sha256": "b240f1d5f7c739f730686fafa9707eb51e1e3c07ddc98203bbe371d118049df1",
+      "bytes": 8971,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "vale-occurrence.md",
+      "kind": "document",
+      "url": "https://docs.vale.sh/checks/occurrence.md",
+      "status": "downloaded",
+      "sha256": "bc1a3339fd053aa3016f160dfb8adcb5aa144625db4c7515f3d726949ff2b7bd",
+      "bytes": 4057,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "vale-repetition.md",
+      "kind": "document",
+      "url": "https://docs.vale.sh/checks/repetition.md",
+      "status": "downloaded",
+      "sha256": "307f76d75f8fad49bb7ad92202fabe6e37e936a695305ce1e5dcf4b3e4583cf5",
+      "bytes": 3436,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "minilm-model-card.md",
+      "kind": "document",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/raw/main/README.md",
+      "status": "downloaded",
+      "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23",
+      "bytes": 3888,
+      "reading_scope": "Model purpose, multilingual support and declared license.",
+      "retained": "Model availability and license are separate from the library; no weights downloaded for this project."
+    },
+    {
+      "id": "audacity-labels.html",
+      "kind": "document",
+      "url": "https://manual.audacityteam.org/man/label_tracks.html",
+      "status": "downloaded",
+      "sha256": "b2e5e89b4b52186c304a007b28694006c538b53c03c75ab2958ad40d45f3f198",
+      "bytes": 41693,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "trelby.html",
+      "kind": "document",
+      "url": "https://trelby.org/",
+      "status": "downloaded",
+      "sha256": "5a704e539f9433585c49f79aa0909ed5956ea7370ae2e2e3853ca3e7fca78dff",
+      "bytes": 5562,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "witscript.html",
+      "kind": "document",
+      "url": "https://witscript.com/",
+      "status": "downloaded",
+      "sha256": "4411eeb68e68881e6c96faf1607916a2c9b951d81cd63a559a4d053962dec178",
+      "bytes": 109050,
+      "reading_scope": "Public product description, language/access restrictions and named functions.",
+      "retained": "Closed service studied by description only; no implementation or commercial system reconstructed."
+    },
+    {
+      "id": "scrite-faq.html",
+      "kind": "document",
+      "url": "https://www.scrite.io/faqs/",
+      "status": "downloaded",
+      "sha256": "69786070f1ea3f9d7a5d5d2bd578be67d024fb0a7c078aff6ba3b3ae6759f6c1",
+      "bytes": 245023,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "story-architect-download.html",
+      "kind": "document",
+      "url": "https://starc.app/download/",
+      "status": "downloaded",
+      "sha256": "5d2768e8b026222e8a473947058f5027a5348514dbde5545e290a5f85a41f0a0",
+      "bytes": 32425,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "beat.html",
+      "kind": "document",
+      "url": "https://www.beat-app.fi/",
+      "status": "unavailable",
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "openai-skills.md",
+      "kind": "document",
+      "url": "https://developers.openai.com/plugins/concepts/skills.md",
+      "status": "downloaded",
+      "sha256": "74bc35163f6908528a3b07f2909ecadcd1731203362d72fe59cad56c0d1920c3",
+      "bytes": 2542,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "ragthoven-paper.html",
+      "kind": "document",
+      "url": "https://arxiv.org/html/2607.13189v1",
+      "status": "downloaded",
+      "sha256": "b1317b06e4d7dc0d03fbfc7b8817af8bb1c33b1659ca79148e076a1a0bb0e717",
+      "bytes": 368323,
+      "reading_scope": "Results, confidence intervals, 12-instance agentic comparison and limitations.",
+      "retained": "No demonstrated general superiority over a simple strong-model baseline; use methods as hypotheses."
+    },
+    {
+      "id": "openmic-paper.html",
+      "kind": "document",
+      "url": "https://arxiv.org/html/2601.08288v1",
+      "status": "downloaded",
+      "sha256": "9af636cffd6c80ca9e4f8cf662426a912d9271d2c6f55a01bca18ecab3ef0c04",
+      "bytes": 151542,
+      "reading_scope": "Architecture, roles, refinement and LLM-as-a-judge evaluation.",
+      "retained": "Chinese-generation research is not audience validation of Spanish revisions."
+    },
+    {
+      "id": "jokeasy.pdf",
+      "kind": "document",
+      "url": "https://arxiv.org/pdf/2602.09496",
+      "status": "downloaded",
+      "sha256": "15cb07a6b0facab451f6d8ef7b4be85a539db557db7416133fe67a35f4ec238e",
+      "bytes": 5335433,
+      "reading_scope": "Design/workflow, participant procedure, qualitative findings and limitations; reviewed through PDF text extraction in the web reader.",
+      "retained": "Keep current material, visible context and author control; the prototype does not demonstrate complete-script refinement in Spanish."
+    },
+    {
+      "id": "comedians-study.html",
+      "kind": "document",
+      "url": "https://arxiv.org/html/2405.20956v1",
+      "status": "downloaded",
+      "sha256": "f474ad151a4a0bd214c469c9279248fc5d4e3a2ecbad3c88b83624e15c8e2b1e",
+      "bytes": 282265,
+      "reading_scope": "Methods and reported practitioner concerns about blandness, context and voice.",
+      "retained": "Keep persona/cultural context and author control; do not extrapolate a historical model study to every future model."
+    },
+    {
+      "id": "dehumor.pdf",
+      "kind": "document",
+      "url": "https://andy-xingbowang.com/papers/dehumor_tvcg.pdf",
+      "status": "downloaded",
+      "sha256": "4fcfaa5b569ee7ce05a1b5547e44c50f6598546738dc1a4447210e609611d8c7",
+      "bytes": 10780086,
+      "reading_scope": "Paper system/context-linking and discussion via its arXiv HTML version (2107.08356v1).",
+      "retained": "Keep whole-to-part context and text/delivery separation; reject immediately-before-laughter as a universal causal punchline label."
+    },
+    {
+      "id": "tic-talk.pdf",
+      "kind": "document",
+      "url": "https://arxiv.org/pdf/2603.21803",
+      "status": "downloaded",
+      "sha256": "0352deca307fede3d0418513507d4a93ba53f0d404d7d975c1bd211959ae8516",
+      "bytes": 874566,
+      "reading_scope": "Multimodal pipeline, edited-special corpus, descriptive/predictive results and limitations via PDF text reader.",
+      "retained": "Keep source-aligned observations; reject causal delivery rules inferred from topic-level correlations or edited specials."
+    },
+    {
+      "id": "haha.html",
+      "kind": "document",
+      "url": "https://www.fing.edu.uy/inco/grupos/pln/haha/",
+      "status": "downloaded",
+      "sha256": "d1f252ee83f98e442cbd2d13a32b4500f1c5751b8f820552aae53329889d56d1",
+      "bytes": 15074,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    },
+    {
+      "id": "mwahaha.html",
+      "kind": "document",
+      "url": "https://pln-fing-udelar.github.io/semeval-2026-humor-gen/",
+      "status": "downloaded",
+      "sha256": "a0af420354ff87cd3b59d991177b473f423c5063f627fbf2f61ff2d4012a13a6",
+      "bytes": 28351,
+      "reading_scope": "Official capability/license-boundary documentation, read for the relevant feature.",
+      "retained": "Referenced to establish integration behavior; document contents are not bundled."
+    }
+  ]
+}

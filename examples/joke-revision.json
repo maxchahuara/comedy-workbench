@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "title": "Delegar: candidato de revisión",
+  "format": "joke",
+  "language": "es",
+  "voice": {"stance": "Se cree muy organizado y se delata solo"},
+  "constraints": {"required_phrases": ["delegar"]},
+  "beats": [
+    {"id": "course", "kind": "setup", "text": "Organicé un curso para aprender a delegar."},
+    {"id": "homework", "kind": "punch", "setup_id": "course", "text": "Lo dicté yo.", "pause_seconds": 1}
+  ]
+}

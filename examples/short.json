@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "title": "Retiro de desconexión",
+  "format": "short",
+  "language": "es-PE",
+  "premise": "Quiero dejar de depender de las pantallas, pero trato el descanso como otro trámite digital.",
+  "voice": {"stance": "Entusiasta al principio; cada paso lo vuelve más cómplice del problema", "delivery": "Conversación, con una reacción silenciosa al final"},
+  "audience": {"context": "Personas familiarizadas con trámites y notificaciones", "dialect": "Español latinoamericano; no requiere jerga local"},
+  "target_seconds": [25, 45],
+  "delivery": {"wpm_min": 125, "wpm_max": 165},
+  "facts": [{"claim": "El retiro y sus instrucciones son una escena ficticia", "status": "fictional"}],
+  "beats": [
+    {"id": "retreat", "kind": "opener", "text": "Me apunté a un retiro para dejar el celular.", "direction": "Guarda el teléfono con orgullo."},
+    {"id": "registration", "kind": "setup", "text": "La inscripción era por una app. El instructor dijo: vamos a cerrar todas las ventanas."},
+    {"id": "window", "kind": "punch", "setup_id": "registration", "text": "Yo cerré la del navegador. Entraba mucha publicidad.", "pause_seconds": 0.8},
+    {"id": "inside", "kind": "setup", "text": "Después nos pidió conectar con nuestro interior. Yo lo intenté, de verdad."},
+    {"id": "storage", "kind": "punch", "setup_id": "inside", "text": "Me salió: almacenamiento lleno.", "pause_seconds": 0.8},
+    {"id": "cleanup", "kind": "tag", "setup_id": "inside", "text": "Borré tres rencores. No liberaron ni un giga."},
+    {"id": "look", "kind": "hold", "text": "", "direction": "Mira al público; va a sacar el teléfono y se detiene.", "action_seconds": 2}
+  ]
+}

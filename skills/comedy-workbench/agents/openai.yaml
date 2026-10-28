@@ -1,0 +1,4 @@
+interface:
+  display_name: "Comedy Workbench"
+  short_description: "Revise jokes, shorts, and long comedy monologues"
+  default_prompt: "Use $comedy-workbench to improve this comedy draft while preserving my voice and explaining the important changes."

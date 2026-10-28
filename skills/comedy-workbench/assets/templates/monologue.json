@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "title": "Nuevo monólogo / New monologue",
+  "format": "monologue",
+  "language": "es",
+  "premise": "",
+  "voice": {},
+  "audience": {},
+  "target_seconds": null,
+  "constraints": {"required_phrases": [], "forbidden_phrases": []},
+  "facts": [],
+  "beats": [
+    {"id": "opening", "kind": "opener", "block": "opening", "text": ""},
+    {"id": "block1-setup", "kind": "setup", "block": "block-1", "text": ""},
+    {"id": "block1-turn", "kind": "punch", "block": "block-1", "setup_id": "block1-setup", "text": ""},
+    {"id": "bridge", "kind": "bridge", "block": "bridge", "text": ""},
+    {"id": "closing", "kind": "closer", "block": "closing", "text": ""}
+  ]
+}

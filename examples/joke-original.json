@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "title": "Delegar: borrador explicativo",
+  "format": "joke",
+  "language": "es",
+  "voice": {"stance": "Se cree muy organizado y se delata solo"},
+  "constraints": {"required_phrases": ["delegar"]},
+  "beats": [
+    {"id": "course", "kind": "setup", "text": "Me inscribí en un curso para aprender a delegar, porque siempre termino encargándome de todas las cosas y eso me quita bastante tiempo."},
+    {"id": "homework", "kind": "punch", "setup_id": "course", "text": "Al final nos dejaron un trabajo en grupo y terminé haciéndolo todo yo solo."},
+    {"id": "explanation", "kind": "context", "text": "O sea, que justamente hice lo contrario de lo que había ido a aprender al curso."}
+  ]
+}

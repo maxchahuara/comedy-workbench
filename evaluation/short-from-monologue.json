@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "title": "El administrador en período de prueba",
+  "format": "short",
+  "language": "es-PE",
+  "target_seconds": [25, 45],
+  "delivery": {"wpm_min": 125, "wpm_max": 155},
+  "constraints": {"required_phrases": ["usuario administrador", "reiniciar"]},
+  "voice": {
+    "stance": "Adulto orgulloso de ser práctico que reconoce gradualmente su propia responsabilidad",
+    "delivery": "Conversacional; la seguridad inicial se vuelve negociación"
+  },
+  "facts": [{"claim": "Adaptación de una escena ficticia del ejemplo público monologue.json; no describe la vida del usuario", "status": "fictional"}],
+  "beats": [
+    {"id": "administrator", "kind": "setup", "text": "El vendedor me dijo que mi casa inteligente estaría bajo mi control. Hasta me puso título: usuario administrador.", "notes": "Nuevo contexto compacto a partir de administrator; planta el término que retorna al final."},
+    {"id": "outage", "kind": "setup", "text": "Una noche se fue la luz. La lavadora no reclamó. El refrigerador no opinó sobre mi cena. Mi esposa encendió una vela.", "notes": "Condensa outage y toma la vela de old-switch. Elimina ambiente oceánico, que requeriría contexto anterior."},
+    {"id": "quiet", "kind": "hold", "text": "", "direction": "Disfruta el descanso; baja los hombros.", "action_seconds": 2},
+    {"id": "restart", "kind": "context", "text": "Volvió la luz: «Hemos detectado inactividad. ¿Desea reiniciar?».", "notes": "Extraído de final-turn. El mensaje es entendible aquí sin el bloque previo de soporte."},
+    {"id": "warranty", "kind": "punch", "setup_id": "outage", "text": "Miré el teléfono, miré la vela… y pedí cinco minutos más de garantía.", "pause_seconds": 1, "notes": "Conserva la negociación y el remate del final original; miradas simultáneas con el habla, sin tiempo adicional."},
+    {"id": "closer", "kind": "callback", "callback_to": "administrator", "text": "La casa ya era inteligente. El que todavía estaba en período de prueba era el usuario administrador.", "notes": "Cierre original con antecedente replantado dentro del short."}
+  ]
+}
